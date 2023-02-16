@@ -1,0 +1,40 @@
+.noUi-connect{
+    background-color: #ffae00!important;
+    height: 5px!important;
+}
+.noUi-horizontal{
+    height: 5px!important;
+    outline: none !important;
+    border: none!important;
+    background-color: #f7f7f7!important;
+}
+.noUi-handle{
+    outline: none;
+    width: 14px!important;
+    height: 14px!important;
+    border-radius:50%!important;
+    -webkit-border-radius:50%!important;
+    -moz-border-radius:50%!important;
+    -ms-border-radius:50%!important;
+    -o-border-radius:50%!important;
+    border: none!important;
+    transform: translate(-8px,1px);
+    -webkit-transform: translate(-8px,1px);
+    -moz-transform: translate(-8px,1px);
+    -ms-transform: translate(-8px,1px);
+    -o-transform: translate(-8px,1px);
+    &::before,
+    &::after {
+        display: none !important;
+        }
+}
+.noUi-touch-area{
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 3px solid #ffae00;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: e-resize;
+}
