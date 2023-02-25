@@ -1,6 +1,5 @@
 import { AnimatePresence,motion } from 'framer-motion';
-import React, { useState } from 'react'
-import { BiChevronsUp } from 'react-icons/bi';
+import React, { useEffect, useState } from 'react'
 import Header from '../../components/header/Header';
 import Projects from '../../components/skillsProjects/Projects';
 import Landing from '../../components/landing/Landing';
@@ -15,16 +14,16 @@ const PortfolioGrid = () => {
         setArrowScroll(() => window.scrollY > 600 ? true : false);
     };
     const [buttonContent, setButtonContent] = useState('Load More');
-    // const [buttonData, setButtonData] = useState(<Projects projects={data} />);
-    // useEffect(() => {
-    //     // setData(projects);
-    //     setButtonData(<Projects projects={projects} />)
-    // }, [count])
-    
+    useEffect(() => {
+        
+    }, [count])
+        
     return (
         <div className='portfolio__portfolio-grid'>
             <AnimatePresence>
-                {arrowScroll && <motion.div onClick={() => window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })} initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} exit={{ opacity: 0, x: 50 }} className='fixed right-4 bottom-8 p-3 bg-e69 text-2xl z-50 cursor-pointer text-white rounded-full' ><BiChevronsUp /></motion.div>}
+                {arrowScroll && <motion.div onClick={() => window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })} initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} exit={{ opacity: 0, x: 50 }} className='fixed right-4 bottom-8 flex items-center justify-center h-12 w-12 bg-e69 text-2xl z-50 cursor-pointer text-white rounded-full' >
+                    <i className="fa-solid fa-chevron-up"></i>
+                </motion.div>}
             </AnimatePresence>
             <div className='xl:block hidden '>
                 <Navbar  />

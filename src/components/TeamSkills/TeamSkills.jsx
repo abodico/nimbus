@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { images } from '../../constants';
 import ProgressOne from '../progress/ProgressOne';
-
 const TeamSkills = () => {
+    const skillsRef = useRef();
     const [scrolledToSkills, setScrolledToSkills] = useState(false);
-      setTimeout(() => {
-    const skills = document.getElementById("skills").offsetTop;
-    onscroll = () => {
-      if (window.scrollY >= skills-300) {
-        setScrolledToSkills(true);
-      }
-    }
-  }, 10);
-
+    useEffect(() => {
+        setTimeout(() => {
+            const skills = skillsRef.current.offsetTop
+            onscroll = () => {
+                if (window.scrollY >= skills - 300) {
+                    setScrolledToSkills(true);
+                }
+            }
+        }, 10);
+    }, []);
     return (
-        <div id='skills' className='portfolio__team-skills flex py-24 items-center gap-12 px-16 relative overflow-hidden bg-section'>
+        <div ref={skillsRef} className='portfolio__team-skills flex py-24 items-center gap-12 px-16 relative overflow-hidden bg-section'>
             <div className="portfolio__team-skills-content flex-1 lg:max-w-1/2 max-w-full lg:px-8 relative ">
                 <div className="portfolio__team-skills-content__pseudo md:-rotate-90  absolute md:-left-24 mr-4 md:top-20 -top-4 left-0 text-xl flex items-center gap-3">
                     <span className='block w-16 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>

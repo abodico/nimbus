@@ -3,7 +3,7 @@ import { images } from '../../constants'
 import ProgressOne from '../progress/ProgressOne'
 const SkillsSec = ({scrolledToSkills}) => {
     return (
-        <div id='skillsSec' className='portfolio__skills-sec py-24 flex items-center justify-between gap-6'>
+        <div  className='portfolio__skills-sec py-24 flex items-center justify-between gap-6'>
             <div className="left-side max-w-1/2 relative">
                 <img src={images.skills01} className='max-w-full relative' alt="skills01" />
                 <img src={images.skills02} className='max-w-full absolute -z-10 bottom-0' alt="skills02" />

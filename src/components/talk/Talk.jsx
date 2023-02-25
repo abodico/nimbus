@@ -4,9 +4,8 @@ import { TalkData } from '../../pages/home/data'
 const Talk = () => {
     const [hover, setHover] = useState(-1)
     return (
-        <div className='portfolio__talk w-full text-center background-dark lg:p-32 md:px-16 md:py-24 p-12 relative overflow-hidden ' >
+        <div className='portfolio__talk w-full text-center bg-track_bg lg:p-32 md:px-16 md:py-24 p-12 relative overflow-hidden ' >
             <img src={images.footer} alt="footer" className="max-w-full absolute -z-0 md:-top-20 top-1/2 -right-80" />
-            <img src={images.counters01} alt="footer" className="max-w-full absolute -z-0 -top-20 -left-80" />
             <h2 style={{wordspacing:5}} className='xs:text-7xl text-4xl tracking-wider font-semibold relative  mb-16 text-white' >Let`s Talk!</h2>
             <div className="portfolio__talk-container relative md:left-5 md:w-auto w-fit mx-auto flex md:flex-row flex-col lg:justify-center md:justify-around lg:gap-24 gap-6 ">
                 {
@@ -23,7 +22,7 @@ const Talk = () => {
                     })
                 }
             </div>
-            <button className="background-dark-yellow hover:bg-e69 transition-all ease-linear mx-auto block mt-12 h-fit py-4 text-lg px-11 text-white relative tracking-wide font-bold rounded" >Hire Me  </button>
+            <button className="bg-darkYellow hover:bg-e69 transition-all ease-linear mx-auto block mt-12 h-fit py-4 text-lg px-11 text-white relative tracking-wide font-bold rounded" >Hire Me  </button>
         </div>
     )
 }

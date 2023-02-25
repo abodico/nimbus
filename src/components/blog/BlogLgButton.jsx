@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { FaGreaterThan, FaRegCalendarAlt } from 'react-icons/fa'
 import {motion } from 'framer-motion'
 const BlogLg = ({blogData, classes}) => {
     const [blogHover, setBlogHover] = useState(-1)
@@ -19,7 +18,7 @@ const BlogLg = ({blogData, classes}) => {
                         </div>
                         <span style={{ wordSpacing: 4 }} className="flex gap-4 text-lg my-4 text-light-dark tracking-wide ">
                             <span className="text-darkYellow text-2xl inline-block">
-                                <FaRegCalendarAlt />
+                                <i className="fa-solid fa-calendar-days"></i>
                             </span>
                             {item.date}
                         </span>
@@ -28,8 +27,8 @@ const BlogLg = ({blogData, classes}) => {
                             <p className="relative w-fit  ">{item.secondText}<div style={{ width: `${blogHover===index? 100 : 0}%` }} className={`duration-500 ${blogHover===index? 'delay-300' : ' '} bottom-1 block -z-10 absolute bg-darkYellow h-1.5 transition-all`} ></div></p>
                         </span>
                         <a href="a" rel='noreferrer' className=' flex items-center mt-4 cursor-pointer text-white relative' >
-                            <span onMouseEnter={() => setBlogSeeMore( index)} onMouseLeave={() => setBlogSeeMore(-1)} className={`inline-block p-3 font-light bg-darkYellow transition-all text-xl ${blogSeeMore === index ? 'rounded-l-md' : ' delay-200 rounded-md'} `} >
-                                <FaGreaterThan />
+                            <span onMouseEnter={() => setBlogSeeMore( index)} onMouseLeave={() => setBlogSeeMore(-1)} className={`inline-block px-3 py-2 font-light bg-darkYellow transition-all text-xl ${blogSeeMore === index ? 'rounded-l-md' : ' delay-200 rounded-md'} `} >
+                                <i className="fa-solid fa-chevron-up"></i>
                             </span>
                             <span className={`p-3 relative text-sm ${blogSeeMore===index?'cursor-pointer':'cursor-default'}`}>
                                 <span className=' w-fit transition-all block h-full' >Read More</span>

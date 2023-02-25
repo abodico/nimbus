@@ -49,7 +49,7 @@ const Projects = ({projects}) => {
                         })}
                     </ul>
                 </div>
-                <div id='cards' className="portfolio__home-projects__content-cards grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-7 lg:px-4 max-w-full container xs:my-8 my-4">
+                <div className="portfolio__home-projects__content-cards grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-7 lg:px-4 max-w-full container xs:my-8 my-4">
                     {filterProjects.map((ele, index) => {
                         return (
                             <motion.div  initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: .30, }} key={index} onMouseEnter={() => setHovered(index)} onMouseLeave={() => setHovered(-1)} className={`portfolio__home-projects__content-cards__card rounded-lg bg-darkYellow transition-all duration-300 ease-linear relative col-span-full ${ele.clss} col-span-1`}>
@@ -60,7 +60,7 @@ const Projects = ({projects}) => {
                                         <a href="#ffg" className='inline-block mb-2' >
                                             <h3 className='hover:text-darkYellow transition-all  duration-400 text-2xl font-bold tracking-wide ' style={{ wordSpacing: 4 }} >{ele.title}</h3>
                                         </a>
-                                        <div className='' >
+                                        <div >
                                             {ele.text.map((item, index) => {
                                                 return (
                                                     <a key={index} href="#ffg" className="inline-block mr-2">

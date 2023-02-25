@@ -3,19 +3,22 @@ import { images } from "../../constants"
 export const aboutMeIcons = [
     {
         link: 'https://www.google.com',
-        color:'behance',
+        color:'text-behance',
+        bg:'bg-behance',
         icon: 'fa-brands fa-behance',
         text:'BEHANCE',
     },
     {
         link: 'https://www.google.com',
-        color:'dribbble',
+        color:'text-dribbble',
+        bg:'bg-dribbble',
         icon: 'fa-brands fa-dribbble',
         text:'DRIBBBLE',
     },
     {
         link: 'https://www.google.com',
-        color:'darkYellow',
+        color:'text-darkYellow',
+        bg:'bg-darkYellow',
         icon: 'fa fa-instagram',
         text:'INSTA',
     },
@@ -44,6 +47,28 @@ export const sidebarData = [
     {
         goal:'/contacts',
         title:'Contacts',
+    },
+]
+export const skillsCard = [
+    {
+        icon: 'fa-solid fa-display',
+        title: 'UI/UX Design',
+        text:'We believe direct collaboration with our clients is essential to bringing unique',
+    },
+    {
+        icon: 'fa-solid fa-person-walking',
+        title: 'Motion Design',
+        text:'We believe direct collaboration with our clients is essential to bringing unique',
+    },
+    {
+        icon: 'fa-regular fa-image',
+        title: 'Graphic Design',
+        text:'We believe direct collaboration with our clients is essential to bringing unique',
+    },
+    {
+        icon: 'fa-solid fa-paintbrush',
+        title: 'Photo Retouch',
+        text:'We believe direct collaboration with our clients is essential to bringing unique',
     },
 ]
 export const counterData = [ 

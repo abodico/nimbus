@@ -1,0 +1,15 @@
+@media screen and (min-width:640px) {
+    .portfolio__offer-cards__card {
+    width: 90%!important;
+    }
+}
+@media screen and (min-width:767px) {
+    .portfolio__offer-cards__card {
+    width: 42%!important;
+    }
+}
+@media screen and (min-width:1024px){
+    .portfolio__offer-cards__card {
+    width: 31% !important;
+    }
+}

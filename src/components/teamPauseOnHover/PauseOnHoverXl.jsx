@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { hover } from '../../pages/our team/data';
 const PauseOnHoverXl = () => {
     let arr = [];
-    for (let i = 0; i < hover.length - 1; i++)arr[i] = hover[i];
+    for (let i = 0; i < hover.length - 1; i++)arr[i] = hover[i]
     return (
         <div className='container mx-auto xl:flex hidden py-16'>
             {

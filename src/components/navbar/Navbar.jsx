@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './navbar.scss'
+import React, { useRef, useState } from 'react'
+import './navbar.css'
 import { AnimatePresence, motion } from 'framer-motion';
 import { images } from '../../constants';
 import { sidebarData } from '../../pages/home/data';
@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom';
 import { pages } from '../../pages/aboutMe/data';
 const Navbar = ({page}) => {
     const [linkHovered, setLinkHovered] = useState(-1);
-    // const [innerHovered, setInnerHovered] = useState(-1)
+    const navbarRef = useRef();
     window.setTimeout(
         () => {
             let end = 96;
-            var navbar = document.getElementsByClassName('portfolio__navbar')[0];
+            var navbar = navbarRef.current;
             window.addEventListener('scroll', () => {
                 var scrollTop =window.pageXOffset || document.documentElement.scrollTop;
                 if (+scrollTop > +end) {
@@ -25,7 +25,7 @@ const Navbar = ({page}) => {
         },10
     )
     return (
-        <div className='portfolio__navbar items-center transition-all duration-300 z-40 container justify-between flex h-fit max-w-full py-4 px-8 fixed shadow-lg bg-white' >
+        <div ref={navbarRef} className=' items-center transition-all duration-300 z-40 container justify-between flex h-fit max-w-full py-4 px-8 fixed shadow-lg bg-white' >
             <NavLink to='/'>
                 <img src={images.darklogo} alt='logo' className='h-16 max-w-full' />
             </NavLink>
@@ -46,8 +46,8 @@ const Navbar = ({page}) => {
                                             return (
                                                 <li key={ndx} className='relative m-4 ' >
                                                     <NavLink to={itm.goal} className='w-fit relative '>
-                                                        <span className='inline-block font-bold text-dark px-1 text-xl relative z-10 tracking-wider transition-all duration-300'>{itm.name}</span>
-                                                        <div className={`transition-all duration-300 ease-linear h-2 bg-darkYellow absolute bottom-0 `}></div>
+                                                        <div className='font-bold text-dark px-1 text-xl relative z-10 tracking-wider transition-all duration-300'>{itm.name}</div>
+                                                        <div className="transition-all duration-300 ease-linear h-2 bg-darkYellow absolute bottom-0.5"></div>
                                                     </NavLink>
                                                 </li>
                                             )

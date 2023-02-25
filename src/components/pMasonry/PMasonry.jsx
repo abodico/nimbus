@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {  workTypes } from '../../pages/skills/data';
+import { workTypes } from '../../pages/skills/data';
 import {motion} from 'framer-motion'
 const PMasonry = ({ projects,height }) => {
     const [ar, setAr] = useState(projects)
@@ -83,7 +83,7 @@ const PMasonry = ({ projects,height }) => {
                                             <a href="#ffg" className='inline-block mb-2' >
                                                 <h3 className='hover:text-darkYellow transition-all  duration-400 text-2xl font-bold tracking-wide ' style={{ wordSpacing: 4 }} >{ele.title}</h3>
                                             </a>
-                                            <div className=''>
+                                            <div>
                                                 {ele.text.map((item, index) => {
                                                     return (
                                                         <a key={index} href="#ffg" className="inline-block mr-2">

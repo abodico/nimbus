@@ -1,0 +1,29 @@
+.box{
+    perspective: 600px;
+}
+.box__inner{
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.box__inner:hover{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.box__inner-face{
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+}
+.box__inner-face.back{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}

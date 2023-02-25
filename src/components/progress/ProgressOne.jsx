@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React from 'react'
 import Counter from '../counter/Counter'
 const ProgressOne = ({ item, bgcolor, progress, height, time }) => {
 	const Parentdiv = {

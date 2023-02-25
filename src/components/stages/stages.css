@@ -1,0 +1,13 @@
+.portfolio__stages-cards__card div.egg {
+    border-radius: 70% 30% 71% 29% / 25% 31% 69% 75%;
+    animation: morph_rotate 4s linear infinite forwards paused;
+    -webkit-animation: morph_rotate 4s linear infinite forwards paused;
+}
+.portfolio__stages-cards__card div.egg.start {
+    animation-play-state: running;
+}
+@keyframes morph_rotate {
+    100% {
+        rotate: -360deg
+    }
+}

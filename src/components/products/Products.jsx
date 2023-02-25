@@ -1,4 +1,4 @@
-import {  useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cati, clothes, tags } from '../../pages/shop/data'
 import * as noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
@@ -6,30 +6,32 @@ import { useShoppingCart } from '../../pages/shop/ShoppingCartContext';
 import {motion} from 'framer-motion'
 import { Link } from 'react-router-dom';
 const Products = () => {
-    let sellers = [];
-    for (let i = 0; i < 9; i++){
-        i < 3 ? sellers = [...sellers, clothes[i]] : console.log();
-    }
+    let sellers = clothes.slice(0,3);
     const [hovered, setHovered] = useState({ liIndex: -1, filter: 0,sellers:-1,card:-1 });
     const [vals, setVals] = useState({ first: 0, last: 30, })
     const [click, setClick] = useState({})
     const [total, setTotal] = useState(0);
-    setTimeout(() => {
-        const slider = document.getElementById('slider');
-        noUiSlider.create(slider, {
-            start: [0, 30],
-            connect: true,
-            step: 10,
-            range: {
-                'min': 0,
-                'max': 30
-            },
-        });
-        slider.noUiSlider.on('update', function () {
-            let val = [...slider.noUiSlider.get()];
-            setVals({ first: +val[0], last: +val[1] });
-        });
-    }, 10);    
+    const sliderRef = useRef();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            const slider = sliderRef.current;
+            noUiSlider.create(slider, {
+                start: [0, 30],
+                connect: true,
+                step: 10,
+                range: {
+                    'min': 0,
+                    'max': 30
+                },
+            });
+            slider.noUiSlider.on('update', function () {
+                let val = [...slider.noUiSlider.get()];
+                setVals({ first: +val[0], last: +val[1] });
+            });
+        }, 5);  
+        return () => clearTimeout(timer);
+        
+}, [])
     const tape = (title) => {
         return (
             <div className="title flex gap-3">
@@ -50,8 +52,7 @@ const Products = () => {
     const [clothesSort, setClothesSort] = useState(clothes)
     const [clothComponent, setClothComponent] = useState();
     const [count, setCount] = useState(0)
-    const [clothesToShow, setClothesToShow] = useState(clothes)
-
+    const [clothesToShow, setClothesToShow] = useState(clothes);
     useEffect(() => {
         if ((document.getElementById('sort').value) === 'rating') {
             setClothesSort(clothesToShow.sort((c1, c2) => +c2.rate - +c1.rate));
@@ -68,9 +69,9 @@ const Products = () => {
         setClothComponent(
             clothesSort.map((item, index) => {
                 let rate = [];
-                for (let i = 0; i < Math.floor(item.rate); i++) { rate = [...rate, <i className="fa-solid fa-star "></i>] }
-                item.rate > Math.floor(item.rate) ? rate = [...rate, <i className="fa-solid fa-star-half-stroke "></i>] : console.log();
-                Math.ceil(item.rate) < 5 ? rate = [...rate, <i className="fa-regular fa-star"></i>] : console.log()
+                for (let i = 0; i < Math.floor(item.rate); i++) { rate = [...rate, <i key={rate.length} className="fa-solid fa-star "></i>] }
+                item.rate > Math.floor(item.rate) ? rate = [...rate, <i key={rate.length} className="fa-solid fa-star-half-stroke "></i>] : console.log();
+                Math.ceil(item.rate) < 5 ? rate = [...rate, <i key={rate.length} className="fa-regular fa-star"></i>] : console.log()
                 return (
                     <motion.div
                         initial={{ y: 30, opacity: 0 }}
@@ -147,7 +148,7 @@ const Products = () => {
                 <div className="pricing">
                     {tape('Price\u00A0Range')}
                     <div className='relative mt-4'>
-                        <div id="slider"></div>
+                        <div id="slider" ref={sliderRef} ></div>
                     </div>
                     <div className="filter mt-6 flex justify-between items-center">
                         <div onMouseEnter={() => setHovered((prev) => { return ({ prev, filter: 1 }) })} onMouseLeave={() => setHovered((prev) => { return ({ prev, filter: 0 }) })} className='flex gap-2 items-center cursor-pointer'>
@@ -162,9 +163,9 @@ const Products = () => {
                     <div className="flex flex-col gap-7 mt-4 ">
                         {sellers.map((item, index) => {
                             let rate=[] ;
-                            for (let i = 0; i < Math.floor(item.rate); i++) { rate = [...rate , <i className="fa-solid fa-star "></i>] }
-                            item.rate > Math.floor(item.rate) ? rate = [...rate, <i className="fa-solid fa-star-half-stroke "></i>] : console.log();
-                            Math.ceil(item.rate) < 5 ? rate = [...rate, <i className="fa-regular fa-star"></i>] : console.log()
+                            for (let i = 0; i < Math.floor(item.rate); i++) { rate = [...rate , <i key={rate.length} className="fa-solid fa-star "></i>] }
+                            item.rate > Math.floor(item.rate) ? rate = [...rate, <i key={rate.length} className="fa-solid fa-star-half-stroke "></i>] : console.log();
+                            Math.ceil(item.rate) < 5 ? rate = [...rate, <i key={rate.length} className="fa-regular fa-star"></i>] : console.log()
                             return (
                                 <div key={index} className="item flex gap-12 items-center">
                                     <img onMouseEnter={()=>setHovered((prev)=>{return({prev,sellers:index})})} onMouseLeave={()=>setHovered((prev)=>{return({prev,sellers:-1})})} src={item.image80} alt="person" className='max-w-full h-20 rounded-full object-top cursor-pointer' />
@@ -217,14 +218,14 @@ const Products = () => {
             </div>
             <div className="content w-full">
                 <div className="head flex justify-end items-center w-full">
-                    <select  name="sort" id="sort" onChange={()=>setCount((prev)=>prev+1) } className='outline-none p-4 w-64 rounded-lg text-61 bg-f7'>
+                    <select defaultValue="latest" name="sort" id="sort" onChange={()=>setCount((prev)=>prev+1) } className='outline-none p-4 w-64 rounded-lg text-61 bg-f7'>
                         <option value="rating" >Sort by average rating</option>
-                        <option value="latest" selected  >Sort by latest</option>
+                        <option value="latest" >Sort by latest</option>
                         <option value="h-to-l" >Sort by price:high to low</option>
                         <option value="l-to-h" >Sort by price:low to high</option>
                     </select>
                 </div>
-                <div className="body flex flex-wrap xl:gap-4 lg:gap-6 lg:justify-between xl:justify-start  items-center mt-8">
+                <div className="body flex flex-wrap xl:gap-4 gap-6 lg:justify-between xl:justify-start  items-center mt-8">
                     {clothComponent}
                 </div>
             </div>

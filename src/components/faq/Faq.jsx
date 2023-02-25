@@ -19,10 +19,10 @@ const Faq = () => {
                             faq.map((item, index) => {
                                 return (
                                     <li className='flex gap-2 item-center cursor-pointer transition-all duration-300' key={index} onClick={() => { chevClick.click !== index ? setChevClick({ ...chevClick, click: index }) : setChevClick({ ...chevClick, click: -1 }) }} onMouseEnter={() => setChevClick({ ...chevClick, hover: index })} onMouseLeave={() => setChevClick({ ...chevClick, hover: -1 })}  >
-                                        <i class={`fa-solid fa-chevron-right h-fit mb-px transition-all duration-300 ${chevClick.click === index || chevClick.hover === index ? 'bg-darkYellow text-white' : 'text-darkYellow'}  rounded-full border border-darkYellow py-2 px-2.5 ${chevClick.click === index ? 'rotate-90' : ''} transition-all duration-300 `} ></i>
+                                        <i className={`fa-solid fa-chevron-right h-fit mb-px transition-all duration-300 ${chevClick.click === index || chevClick.hover === index ? 'bg-darkYellow text-white' : 'text-darkYellow'}  rounded-full border border-darkYellow py-2 px-2.5 ${chevClick.click === index ? 'rotate-90' : ''} transition-all duration-300 `} ></i>
                                         <div className='transition-all duration-300 relative'>
                                             <h4 className={`text-xl font-semibold transition-all duration-300 ${chevClick.click === index ? 'text-darkYellow' : 'text-lightDark'}`}>{item.title}</h4>
-                                            <p className={`w-1/2 text-base text-61 leading-relaxed transition-all  duration-700 mt-3 ${chevClick.click === index ? ' block opacity-100 ' : ' hidden opacity-0'}`}>{item.text}</p>
+                                            <p className={`w-1/2  overflow-hidden text-base text-61 leading-relaxed transition-all duration-1000 mt-3 ${chevClick.click === index ? 'max-h-60' : 'max-h-0'} `}>{item.text}</p>
                                         </div>
                                     </li>
                                 )

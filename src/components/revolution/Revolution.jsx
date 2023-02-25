@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { FaGreaterThan } from 'react-icons/fa';
 const Revolution = () => {
     const [revSeeMore, setRevSeeMore] = useState(-1)
     return (
@@ -15,8 +14,8 @@ const Revolution = () => {
                     <h3 className="text-lightDark mb-4 text-3xl font-semibold hover:text-darkYellow transition-all duration-300">Creative Thinking</h3>
                     <p className="text-61 leading-7 text-lg mb-6">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction.</p>
                     <a href="#a" rel='noreferrer' className=' flex items-center mt-4 cursor-pointer text-white relative' >
-                        <span onMouseEnter={() => setRevSeeMore(1)} onMouseLeave={() => setRevSeeMore(0)} className={`inline-block p-3 font-light bg-darkYellow transition-all text-xl ${revSeeMore === 1 ? 'rounded-l-md' : ' delay-200 rounded-md'} `} >
-                            <FaGreaterThan />
+                        <span onMouseEnter={() => setRevSeeMore(1)} onMouseLeave={() => setRevSeeMore(0)} className={`inline-block px-3 p-2 font-light bg-darkYellow transition-all text-xl ${revSeeMore === 1 ? 'rounded-l-md' : ' delay-200 rounded-md'} `} >
+                            <i className="fa-solid fa-greater-than"></i>
                         </span>
                         <span className='p-3 relative block text-sm'>
                             <span className=' w-fit transition-all block z-10 relative h-full' >Read More</span>
