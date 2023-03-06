@@ -33,9 +33,9 @@ const Navbar = ({page}) => {
                 {
                 sidebarData.map((item, index) => {
                     return (
-                        <li key={index} onMouseEnter={() => setLinkHovered(index)} onMouseLeave={() => setLinkHovered(-1)} >
+                        <li key={index} onMouseEnter={() => setLinkHovered(index)} onMouseLeave={() => setLinkHovered(-1)}  >
                             <NavLink to={item.goal} className={`btn py-3 flex justify-between items-center ${page===item.title&&'active'}`} >
-                                <span className='font-bold text-dark text-lg tracking-wider'>{item.title}
+                                <span className='font-bold text-dark text-lg w-fit tracking-wider'>{item.title}
                                     <div className={`h-1.5  ${linkHovered === index ? 'w-full' : 'w-0'}  transition-all duration-300  relative -z-10 -top-2.5 bg-darkYellow`}></div>
                                 </span>
                             </NavLink>
@@ -44,7 +44,7 @@ const Navbar = ({page}) => {
                                     {
                                         pages[index].map((itm, ndx) => {
                                             return (
-                                                <li key={ndx} className='relative m-4 ' >
+                                                <li key={ndx} className='relative m-4 w-fit' >
                                                     <NavLink to={itm.goal} className='w-fit relative '>
                                                         <div className='font-bold text-dark px-1 text-xl relative z-10 tracking-wider transition-all duration-300'>{itm.name}</div>
                                                         <div className="transition-all duration-300 ease-linear h-2 bg-darkYellow absolute bottom-0.5"></div>
