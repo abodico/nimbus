@@ -55,19 +55,19 @@ const Contacts = () => {
                             contactData.map((item, index) => {
                                 return (
                                     <a
-                                    href={index === 1 ? 'mailto:yourmail.com' : index === 0 ? 'tel:+1800123456789' : 'www.behance.com'}
-                                    onMouseEnter={() => { setHover(index) }}
-                                    onMouseLeave={() => { setHover(-1) }}
-                                    key={index}
-                                    className="cursor-pointer mx-auto break-keep inline-block md:mx-0 md:w-fit md:max-w-full h-fit">
+                                        href={index === 1 ? 'mailto:yourmail.com' : index === 0 ? 'tel:+1800123456789' : 'www.behance.com'}
+                                        onMouseEnter={() => { setHover(index) }}
+                                        onMouseLeave={() => { setHover(-1) }}
+                                        key={index}
+                                        className="cursor-pointer mx-auto break-keep inline-block md:mx-0 md:w-fit md:max-w-full h-fit">
                                         <div className="part flex gap-4 w-fit " key={index} >
                                             <i className={`${item.icon} transition-all duration-300 ${index === hover ? 'text-61' : 'text-e69'}  text-4xl `}></i>
                                             <div className="">
                                                 <p style={{ wordSpacing: 5 }} className={`font-semibold ${index === hover ? 'text-e69' : ' text-black'}  transition-all duration-300 tracking-wide text-xl `}>{item.firstP}</p>
                                                 <p className={`text-61 transition-all duration-300 text-lg ${index === 2 && ' hidden'}`} >{item.secondP}</p>
-                                                <div className={`${index!==2 && 'hidden'} flex gap-4 mt-3`}>
+                                                <div className={`${index !== 2 && 'hidden'} flex gap-4 mt-3`}>
                                                     {
-                                                        aboutMeIcons.map((it, ind) => <i key={ind} className={it.icon + ' text-' + it.color +' text-lg hover:text-darkYellow transition-all duration-300'}></i>)
+                                                        aboutMeIcons.map((it, ind) => <i key={ind} className={it.icon + ' text-' + it.color + ' text-lg hover:text-darkYellow transition-all duration-300'}></i>)
                                                     }
                                                 </div>
                                             </div>

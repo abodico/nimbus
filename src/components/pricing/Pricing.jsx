@@ -19,7 +19,7 @@ const Pricing = () => {
                             )
                         })}
                     </ul>
-                    <button className="btn background-light-yellow hover:bg-darkYellow transition-all mx-auto block text-white font-semibold text-lg relative top-6 py-4 px-8 rounded" >Buy Now</button>
+                    <button className="btn bg-lightYellow hover:bg-darkYellow transition-all mx-auto block text-white font-semibold text-lg relative top-6 py-4 px-8 rounded" >Buy Now</button>
                 </div>
                 <div className="basic-card  shadow-xl h-fit w-full rounded-md ">
                     <div className="price bg-pricing_price2 text-center xl:px-24 relative rounded-t-md bg-cover text-white">
