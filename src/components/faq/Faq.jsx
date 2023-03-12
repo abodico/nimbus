@@ -13,7 +13,7 @@ const Faq = () => {
                         <span className='block w-20 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>
                         <span style={{ color: '#adadad' }} >faq</span>
                     </div>
-                    <h3 className="text-light-dark xs:leading-snug xs:text-4xl text-xl tracking-wider font-semibold" style={{ wordSpacing: '10px' }} >The Answers to<br />All Your Questions</h3>
+                    <h3 className="text-lightDark xs:leading-snug xs:text-4xl text-xl tracking-wider font-semibold" style={{ wordSpacing: '10px' }} >The Answers to<br />All Your Questions</h3>
                     <ul className="flex flex-col gap-4 mt-4">
                         {
                             faq.map((item, index) => {

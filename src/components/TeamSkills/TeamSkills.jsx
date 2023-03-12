@@ -22,8 +22,8 @@ const TeamSkills = () => {
                     <span style={{ color: '#adadad' }} >my skills</span>
                 </div>
                 <h3 className="text-light-dark xs:text-5xl text-3xl tracking-wide font-semibold leading-relaxed" style={{ wordSpacing: '8px' }} >What My Design<br/> Skills Included</h3>
-                <p className="back-color mt-6 leading-8 text-lg">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
-                <p className="back-color my-6 leading-8 text-lg">Since 2015 I have been a visionary and a reliable software engineering partner for world-class brands.</p>
+                <p className="text-61 mt-6 leading-8 text-lg">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
+                <p className="text-61 my-6 leading-8 text-lg">Since 2015 I have been a visionary and a reliable software engineering partner for world-class brands.</p>
                 <img src={images.maxnimbus} alt="maxnimbus" />
             </div>
                 <img src={images.team_01} className=' max-w-full absolute right-0 -top-4' alt="team_01" />

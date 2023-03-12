@@ -6,7 +6,7 @@ const Stages = () => {
         <div className='portfolio__faq w-full relative py-32 max-w-full' >
             <div className="portfolio__faq-text text-center sm:w-1/2 px-4 mx-auto mb-8">
                 <h2 className='text-lightDark font-bold text-4xl leading-snug tracking-wider mb-6'>Our Help Center <br /> Can Give You Answer</h2>
-                <p className='back-color text-lg leading-8 tracking-wide' >These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
+                <p className='text-61 text-lg leading-8 tracking-wide' >These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
             </div>
             <div className=" portfolio__faq-cards container mx-auto max-w-full lg:px-16 px-4 lg:flex-nowrap flex-wrap lg:gap-8 gap-4 flex justify-evenly my-8 relative">
                 {cards.map((item, index) => {

@@ -43,8 +43,8 @@ const Pricing = () => {
                     <span className='block xs:w-20 w-16 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>
                     <span style={{ color: '#adadad' }} className='tracking-wider'>pricing tables</span>
                 </div>
-                <h3 className="text-light-dark z-10 relative md:text-5xl text-3xl leading-relaxed tracking-wide font-semibold" style={{ wordSpacing: '10px' }} >Choose Your<br/>Enterteiment Plan</h3>
-                <p className="back-color mt-6 leading-8 text-lg xl:w-3/4">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
+                <h3 className="text-lightDark z-10 relative md:text-5xl text-3xl leading-relaxed tracking-wide font-semibold" style={{ wordSpacing: '10px' }} >Choose Your<br/>Enterteiment Plan</h3>
+                <p className="text-61 mt-6 leading-8 text-lg xl:w-3/4">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
                 <ul className="mt-4">
                     {pricingPlan.map((item, index) => {
                         return (
