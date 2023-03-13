@@ -5,7 +5,7 @@ import { faq } from '../../pages/faq/data'
 const Faq = () => {
     const [chevClick, setChevClick] = useState({click:-1,hover:-1})
     return (
-        <div className='portfolio__faq-faqSec bg-section mb-40 relative flex lg:flex-row max-w-full px-4 flex-col items-center container mx-auto lg:px-12 ' >
+        <div className='bg-section mb-40 relative flex lg:flex-row px-4 flex-col items-center container lg:px-12 ' >
             <div className='py-40 lg:pl-24 w-full'>
                 <img src={images.faq02} alt="faq02" className='max-w-full max-h-full transition-all duration-300 w-fit left-0 top-0 absolute ' />
                 <div className="portfolio__faq-content relative ">
@@ -13,7 +13,7 @@ const Faq = () => {
                         <span className='block w-20 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>
                         <span style={{ color: '#adadad' }} >faq</span>
                     </div>
-                    <h3 className="text-lightDark xs:leading-snug xs:text-4xl text-xl tracking-wider font-semibold" style={{ wordSpacing: '10px' }} >The Answers to<br />All Your Questions</h3>
+                    <h3 className="text-lightDark xs:leading-snug xs:text-4xl text-3xl tracking-wider font-semibold" style={{ wordSpacing: '10px' }} >The Answers to<br />All Your Questions</h3>
                     <ul className="flex flex-col gap-4 mt-4">
                         {
                             faq.map((item, index) => {
@@ -22,7 +22,7 @@ const Faq = () => {
                                         <i className={`fa-solid fa-chevron-right h-fit mb-px transition-all duration-300 ${chevClick.click === index || chevClick.hover === index ? 'bg-darkYellow text-white' : 'text-darkYellow'}  rounded-full border border-darkYellow py-2 px-2.5 ${chevClick.click === index ? 'rotate-90' : ''} transition-all duration-300 `} ></i>
                                         <div className='transition-all duration-300 relative'>
                                             <h4 className={`text-xl font-semibold transition-all duration-300 ${chevClick.click === index ? 'text-darkYellow' : 'text-lightDark'}`}>{item.title}</h4>
-                                            <p className={`w-1/2  overflow-hidden text-base text-61 leading-relaxed transition-all duration-1000 mt-3 ${chevClick.click === index ? 'max-h-60' : 'max-h-0'} `}>{item.text}</p>
+                                            <p className={`md:w-1/2  overflow-hidden text-base text-61 leading-relaxed transition-all duration-1000 mt-3 ${chevClick.click === index ? 'max-h-60' : 'max-h-0'} `}>{item.text}</p>
                                         </div>
                                     </li>
                                 )

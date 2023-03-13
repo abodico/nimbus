@@ -29,7 +29,7 @@ const Skills = () => {
         }
     }, 20);
     return (
-        <div className='portfolio__skills relative'>
+        <div className=' relative'>
             <AnimatePresence>
                 {arrowScroll && <motion.div onClick={() => window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })} initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} exit={{ opacity: 0, x: 50 }} className='fixed right-4 bottom-8 flex items-center justify-center h-12 w-12 bg-e69 text-2xl z-50 cursor-pointer text-white rounded-full' >
                     <i className="fa-solid fa-chevron-up"></i>
@@ -45,7 +45,9 @@ const Skills = () => {
             <div ref={skillsSeRef} >
                 <SkillsSec scrolledToSkills={scrolledToSkills} />
             </div>
-            <Exclusive />
+            <div className="bg-section">
+                <Exclusive />
+            </div>
             <div ref={countersRef} >
                 <Counters scrolledToCounter={scrolledToCounter} />
             </div>

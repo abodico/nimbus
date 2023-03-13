@@ -1,7 +1,7 @@
 const HomeFBox = (props) => {
     return (
-        <div className="portfolio__home-container__elementor-boxes__Home-f-box transition-all duration-300 ease-in-out hover:-translate-y-5 flex cursor-pointer justify-between shadow-lg max-w-full md:w-auto w-full hover:shadow-2xl bg-white px-4 py-6 gap-16 rounded-lg items-center">
-            <div className='flex gap-6 items-center' >
+        <div className="portfolio__home-container__elementor-boxes__Home-f-box transition-all duration-300 ease-in-out hover:-translate-y-5 flex cursor-pointer justify-between shadow-lg max-w-full md:w-auto w-full hover:shadow-2xl bg-white px-4 py-6 sm:gap-16  rounded-lg items-center">
+            <div className='flex sm:gap-6 gap-3 items-center' >
                 <span className={`px-2 py-1 font-bold text-2xl text-white rounded-full ${props.class}`} >
                 <i className="fa-solid fa-check"></i>
                 </span>

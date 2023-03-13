@@ -16,7 +16,7 @@ const Projects = () => {
     }
     };
     return (
-        <div className=' container mx-auto relative max-w-full md:p-2 p-8' >
+        <div className=' relative max-w-full md:p-2 p-4' >
             <div className=" lg:w-auto w-full lg:p-16">
                 <div className=" relative lg:w-4/6 ">
                     <div className=" lg:-rotate-90 absolute lg:-left-28 lg:top-20 text-xl flex -top-6 left-0 items-center gap-3">

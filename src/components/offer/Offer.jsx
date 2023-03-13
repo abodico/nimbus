@@ -4,7 +4,7 @@ import './offer.css'
 const Offer = () => {
     const [cardHovered, setCardHovered] = useState(-1)
     return (
-        <div className=' bg-white py-16 container mx-auto md:px-6 px-3 max-w-full'>
+        <div className=' bg-white py-16 container mx-auto md:px-6 px-3 وmax-w-full'>
             <div className="relative mb-6 px-3 ">
                 <div className="lg:-rotate-90 absolute mr-4 lg:top-16 lg:-left-16 left-4 -top-6 text-xl flex items-center gap-3">
                     <span className='block w-16 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>

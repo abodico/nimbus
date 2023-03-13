@@ -31,7 +31,7 @@ const Projects = ({projects}) => {
         }
     }
     return (
-        <div className='portfolio__home-projects container mx-auto relative max-w-full md:p-6 p-8' >
+        <div className='portfolio__home-projects container  relative md:p-6 p-8' >
             <div className="portfolio__home-projects__content lg:w-auto w-full lg:p-16">
                 <div className="portfolio__home-projects__content-text relative lg:w-4/6 ">
                     <div className="portfolio__home-container__about_me-content__pseudo lg:-rotate-90 absolute lg:-left-32 lg:top-24 text-xl flex -top-6 left-0 items-center gap-3">

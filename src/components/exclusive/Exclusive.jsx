@@ -6,9 +6,9 @@ const Exclusive = () => {
     const [activeButton, setActiveButton] = useState('0');
     const [hovered, setHovered] = useState({skills:-1})
     return (
-        <div className='portfolio__exclusive py-32 relative flex justify-around gap-6 px-12 bg-section overflow-y-hidden'>
-            <img src={images.skills_02} alt="skills_02" className="max-w-full absolute top-0" />
-            <div className="portfolio__exclusive-left-side max-w-40 relative">
+        <div className='container py-32 relative flex md:flex-row flex-col justify-around gap-6 px-12 overflow-hidden'>
+            <img src={images.skills_02} alt="skills_02" className=" absolute top-0" />
+            <div className="left-side md:max-w-40 relative">
                 <div className="portfolio__home-container__my_skills-content__pseudo md:-rotate-90  absolute md:-left-24 mr-4 md:top-20 -top-4 left-0 text-xl  flex items-center gap-3">
                     <span className='block w-16 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>
                     <span style={{ color: '#adadad' }} >about me</span>
@@ -20,16 +20,16 @@ const Exclusive = () => {
                 </div>
                 <div className="text relative h-fit overflow-y-hidden">
                     <div className={`${activeButton === '0' ? 'mt-6' : 'mt-2'} duration-700 `}>
-                        <p className={`text-61  transition-all duration-300 leading-8 text-lg`}>Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do. Every story we tell, every brand we build, and every.</p>
-                        <p className={`text-61 mt-3 leading-8 text-lg `}>These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful and beautifully, too.</p>
+                        <p className={`text-61  transition-all duration-300 leading-8 md:text-lg`}>Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do. Every story we tell, every brand we build, and every.</p>
+                        <p className="text-61 mt-3 leading-8 md:text-lg ">These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful and beautifully, too.</p>
                     </div>
                     <div className={`absolute z-10 transition-all duration-700 bg-section ${activeButton === '1' ? ' top-0' : ' top-full'}`} >
-                        <p className={`text-61 ${activeButton === '0' ? 'mt-6' : 'mt-2'} transition-all duration-300 leading-8 text-lg`}>Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do. Every story we tell, every brand we build, and every.</p>
-                        <p className={`text-61 mt-3 leading-8 text-lg `}>These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful and beautifully, too.</p>
+                        <p className={`text-61 ${activeButton === '0' ? 'mt-6' : 'mt-2'} transition-all duration-300 leading-8 md:text-lg`}>Product Designer and Digital Creative Director working in design field for 13 years so far, specialized in UI/UX, Branding and digital designs. These are the words we live by in everything we do. Every story we tell, every brand we build, and every.</p>
+                        <p className="text-61 mt-3 leading-8 md:text-lg " >These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful and beautifully, too.</p>
                     </div>
                 </div>
             </div>
-            <div className="portfolio__exclusive-right-side md:mt-4 mt-10 lg:max-w-1/2 max-w-full flex flex-wrap gap-6 relative">
+            <div className="right-side md:mt-4 mt-10 lg:max-w-1/2 max-w-full flex flex-wrap gap-6 relative">
                 {skillsCard.map((item, index) =>
                     <div
                         key={index}

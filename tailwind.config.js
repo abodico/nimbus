@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   important: true,
   theme: {
+    container: {
+      center:true, 
+    },
     screens: {
       'xxs': '280px',
       'x.5s':'400px',
@@ -77,7 +80,7 @@ module.exports = {
       '23':'#232323',
       '2d': '#2d2d2d',
       'transparent':'transparent',
-    }    
+    },
   },
   plugins: [],
 }

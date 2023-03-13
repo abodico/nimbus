@@ -4,7 +4,7 @@ import { pricingCard, pricingPlan } from '../../pages/services/data'
 const Pricing = () => {
     const [hover, setHover] = useState(-1);
     return (
-        <div className='portfolio__pricing flex lg:flex-row flex-col bg-white py-16 px-4 gap-24, items-center overflow-hidden'>
+        <div className='portfolio__pricing flex lg:flex-row flex-col bg-white py-16 px-4 container mx-auto items-center overflow-hidden'>
             <div className="portfolio__pricing-leftside relative mb-16 lg:mb-0 md:px-12 sm:px-32 xs:px-8 px-4 flex md:flex-row flex-col md:gap-6 gap-10 xl:max-w-1/2 max-w-full w-full lg:flex-1">
                 <div className="starter-card shadow-xl w-full rounded-md mt-8 ">
                     <div className="price bg-pricing_price text-center xl:px-24 relative rounded-t-md bg-cover text-white">

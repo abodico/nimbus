@@ -13,7 +13,7 @@ const Services = () => {
     const [arrowScroll, setArrowScroll] = useState(false);
     onscroll = () => setArrowScroll(() => window.scrollY > 600 ? true : false);
     return (
-        <div className='portfolio__services bg-services bg-fixed bg-cover overflow-x-hidden' >
+        <div className='portfolio__services overflow-x-hidden' >
             <AnimatePresence>
                 {arrowScroll && <motion.div onClick={() => window.scrollTo({ left: 0, top: 0, behavior: 'smooth' })} initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} exit={{ opacity: 0, x: 50 }} className='fixed right-4 bottom-8 flex items-center justify-center h-12 w-12 bg-e69 text-2xl z-50 cursor-pointer text-white rounded-full' >
                     <i className="fa-solid fa-chevron-up"></i>
@@ -27,9 +27,11 @@ const Services = () => {
             </div>
             <Landing title='Services' />
             <Offer />
-            <Revolution />
-            <ServCounters />
-            <Pricing />
+                <Revolution />
+            <div className="bg-services bg-fixed bg-cover ">
+                <ServCounters />
+            </div>
+            <Pricing />        
             <ServHover />
             <Talk />
         </div>

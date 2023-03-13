@@ -26,7 +26,9 @@ const FAQ = () => {
             </div>
             <Landing title='FAQ' />
             <Card />
-            <Faq />
+            <div className="bg-section">
+                <Faq />
+            </div>
             <Subscribe/>
             <Talk/>
         </div>

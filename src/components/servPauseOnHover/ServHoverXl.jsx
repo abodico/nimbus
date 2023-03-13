@@ -15,7 +15,7 @@ render() {
     }
     let ar =[images.testimonials_01,images.testimonials_02,images.testimonials_03,images.testimonials_04,images.testimonials_05,images.testimonials_06]
     return (
-        <div className="portfolio__services-hover mx-auto hidden xl:block container bg-white max-w-full px-4">
+        <div className="hidden xl:block container bg-white  px-4">
             <Slider {...settings} >
                 {servPauseOnHover.map((item, index) => {
                     return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 const Revolution = () => {
     const [revSeeMore, setRevSeeMore] = useState(-1)
     return (
-        <div className='portfolio__revolution py-20 bg-section sm:px-12 md:px-24 px-6 max-w-full'>
+        <div className='portfolio__revolution py-20 bg-section sm:px-12 md:px-24 px-6 container mx-auto'>
             <div className="portfolio__faq-text text-center lg:w-1/2 px-4 mx-auto mb-8">
                 <h2 style={{ wordSpacing: 8 }} className='text-lightDark font-bold text-4xl leading-snug tracking-wider mb-6'>Gearing Up for<br />the Digital Revolution </h2>
                 <p className='text-61 text-lg leading-8 tracking-wide' >These are the words we live by in everything we do. Every story we tell, every brand we build, and every interaction we create must not only look beautiful.</p>
