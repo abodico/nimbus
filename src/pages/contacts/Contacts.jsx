@@ -42,7 +42,7 @@ const Contacts = () => {
                 <Header />
             </div>
             <Landing title='Contacts' />
-            <div className="main flex md:flex-row flex-col justify-between container md:max-w-auto max-w-full mx-auto my-20 md:px-12 px-6 md:gap-0 gap-6 ">
+            <div className="main  flex md:flex-row flex-col justify-between container md:max-w-auto my-20 md:px-12 px-6 md:gap-0 gap-6 ">
                 <div className="contacts relative md:max-w-1/3 max-w-full md:px-4 mx-4">
                     <div className="portfolio__home-container__my_skills-content__pseudo md:-rotate-90 absolute md:-left-28 mr-4 md:top-20 -top-6 left-0 text-xl flex items-center gap-3">
                         <span className='block w-24 background-back h-px' style={{ backgroundColor: '#adadad' }}></span>
